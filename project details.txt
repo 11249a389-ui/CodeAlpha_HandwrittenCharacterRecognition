@@ -1,0 +1,40 @@
+This the project like handwritten character recognition i have learn this how to predict some single digit and accuracy and graph identify for the using app like the prediction most accurate for this project and 
+The project can be improved by supporting more types of handwritten characters and using larger and more diverse datasets.
+## How to Run
+
+Install the required libraries:
+
+pip install -r requirements.txt
+
+Train the model:
+
+python handwritten_recognition.py
+
+Run the application:
+
+streamlit run app.py
+## Application
+
+The Streamlit application allows the user to upload a handwritten digit image and get the predicted digit with a confidence score.
+
+## Model Evaluation
+
+The model is evaluated using:
+
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- Confusion Matrix
+
+## Project Flow
+
+Image
+↓
+Preprocessing
+↓
+CNN Model
+↓
+Prediction
+↓
+Streamlit Application
