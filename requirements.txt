@@ -1,0 +1,7 @@
+numpy
+pandas 
+mataplotlib 
+scikit-learn
+tensor flow 
+streamlit
+pillow:image processing and manipulation
