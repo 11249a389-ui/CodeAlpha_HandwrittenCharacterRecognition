@@ -4,14 +4,17 @@ import streamlit as st
 from PIL import Image, ImageOps
 from tensorflow.keras.models import load_model
 
+
 model = load_model(
     "models/handwritten_character_model.keras"
 )
 
+
 st.set_page_config(
-    page_title="Handwritten Character Recognition",
+    page_title="Handwritten Digit Recognition",
     page_icon="✍️"
 )
+
 
 st.title("✍️ Handwritten Digit Recognition")
 
@@ -19,10 +22,12 @@ st.write(
     "Upload a handwritten digit image to predict the digit."
 )
 
+
 uploaded_file = st.file_uploader(
-    "Upload Image",
+    "Upload a single handwritten digit",
     type=["png", "jpg", "jpeg"]
 )
+
 
 if uploaded_file is not None:
 
@@ -30,7 +35,7 @@ if uploaded_file is not None:
 
     st.image(
         image,
-        caption="Uploaded Image",
+        caption="Uploaded Digit",
         width=250
     )
 
@@ -52,7 +57,8 @@ if uploaded_file is not None:
         )
 
         prediction = model.predict(
-            image_array
+            image_array,
+            verbose=0
         )[0]
 
         predicted_digit = np.argmax(
